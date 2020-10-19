@@ -1,0 +1,58 @@
+@import '@/assets/styles/helpers/normalize';
+@import '@/assets/styles/helpers/fonts.scss';
+
+body {
+	font-family: 'Inter-Medium';
+	color: #181C43;
+	overflow-x: hidden;
+}
+
+.wrapper {
+	width: 768px;
+	margin: 0 auto;
+	padding: 0 10px;
+	box-sizing: border-box;
+}
+
+.title {
+	text-align: center;
+	font-size: 24px;
+}
+
+.subtitle {
+	font-size: 18px;
+}
+
+.link {
+	padding-bottom: 1px;
+	text-decoration: none;
+	color: $light-blue;
+	border-bottom: 1px dashed $light-blue;
+	cursor: pointer;
+	transition: .3s;
+
+	&:hover {
+		color: blue;
+		border-color: blue;
+	}
+}
+
+.fade-enter-active, .fade-leave-active {
+	transition: .3s;
+}
+
+.fade-enter, .fade-leave-to {
+	opacity: 0;
+}
+
+@media (max-width: 767px) {
+	.wrapper {
+		width: 480px;
+	}
+}
+
+@media (max-width: 479px) {
+	.wrapper {
+		width: 320px;
+	}
+}

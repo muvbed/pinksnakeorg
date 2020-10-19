@@ -1,0 +1,115 @@
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.5);
+	overflow: auto;
+
+	&__wrapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 470px;
+	}
+
+	&__box {
+		position: relative;
+		width: 450px;
+		padding: 25px 15px;
+		text-align: center;
+		background-color: #fff;
+		box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+		box-sizing: border-box;
+	}
+
+	&__title {
+		margin: 15px 0 10px;
+	}
+
+	&__subtitle {
+		font-family: 'Inter-LightBETA';
+	}
+
+	&__inner {
+		margin: 20px 0 30px;
+		padding: 0;
+		list-style-type: none;
+	}
+
+	&__field {
+		display: block;
+		margin-bottom: 15px;
+
+		&-name {
+			margin-bottom: 5px;
+			font-size: 18px;
+			font-weight: bold;
+		}
+
+		&-value {
+			padding-bottom: 1px;
+			line-height: 1.5;
+			word-wrap: break-word;
+			border-bottom: 1px solid black;
+		}
+
+		&-input, &-select {
+			width: 100%;
+			padding: 7px 10px;
+			outline: 0;
+			box-sizing: border-box;
+		}
+
+		&-error {
+			margin-top: 5px;
+			text-align: left;
+			color: $red;
+		}
+	}
+
+	&__confirm {
+		@include button;
+		width: 200px;
+		padding: 15px 25px;
+		background: $green;
+
+		&:hover {
+			transform: scale(1.05);
+		}
+	}
+
+	&__close {
+		position: absolute;
+		top: 14px;
+		right: 14px;
+		line-height: 0.66;
+		font-size: 30px;
+		overflow: hidden;
+		cursor: pointer;
+		transition: .3s;
+
+		&:hover {
+			color: $red;
+			transform: scale(1.2);
+		}
+	}
+}
+
+@media (max-width: 479px) {
+	.modal {
+		&__wrapper {
+			min-height: 600px;
+		}
+		
+		&__box {
+			width: 290px;
+		}
+	}
+}
