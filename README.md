@@ -1,4 +1,4 @@
-# itprojects-test
+# pinksnakeorg
 
 ## Project setup
 ```
